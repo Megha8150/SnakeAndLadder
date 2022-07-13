@@ -11,7 +11,9 @@ namespace Day4
         static int START_POSITION = 0; 
         public static void game()
         {
-            Console.WriteLine("Welcome to Snake and Ladder");
+            Random random = new Random();
+            int num = random.Next(1, 7);
+            Console.WriteLine(num);
         }
     }
 }
