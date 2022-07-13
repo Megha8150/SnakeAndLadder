@@ -15,20 +15,28 @@ namespace Day4
         static int SNAKE =2;
         public static void game()
         {
-            Random random = new Random();
-            int dieNum = random.Next(1, 7);
-            int option = random.Next(0, 3);
-            switch(option)
+            while (currentPosition < 100)
             {
-                case 1:
-                    currentPosition += dieNum;
-                    break;
-                case 2:
-                    currentPosition -= dieNum;
-                    break;
-                default:
-                    break;
+                Random random = new Random();
+                int dieNum = random.Next(1, 7);
+                int option = random.Next(0, 3);
+                switch (option)
+                {
+                    case 1:
+                        currentPosition += dieNum;
+                        break;
+                    case 2:
+                        currentPosition -= dieNum;
+                        if(currentPosition < 0)
+                        {
+                            currentPosition = START_POSITION;
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
+            Console.WriteLine(currentPosition);
         }
     }
 }
