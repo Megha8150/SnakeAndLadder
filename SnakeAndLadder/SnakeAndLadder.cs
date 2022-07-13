@@ -8,6 +8,7 @@ namespace Day4
 {
      class SnakeAndLadder
     {
+        static int START_POSITION = 0; 
         public static void game()
         {
             Console.WriteLine("Welcome to Snake and Ladder");
