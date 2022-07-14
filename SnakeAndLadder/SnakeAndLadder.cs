@@ -24,6 +24,10 @@ namespace Day4
                 {
                     case 1:
                         currentPosition += dieNum;
+                        if(currentPosition >100)
+                        {
+                            currentPosition -= dieNum;
+                        }
                         break;
                     case 2:
                         currentPosition -= dieNum;
@@ -35,6 +39,7 @@ namespace Day4
                     default:
                         break;
                 }
+                
             }
             Console.WriteLine(currentPosition);
         }
