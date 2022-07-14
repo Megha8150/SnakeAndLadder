@@ -13,6 +13,7 @@ namespace Day4
         static int NO_PLAY = 0;
         static int LADDER = 1;
         static int SNAKE =2;
+        static int dieCount = 0;
         public static void game()
         {
             while (currentPosition < 100)
@@ -39,9 +40,11 @@ namespace Day4
                     default:
                         break;
                 }
-                
+                Console.WriteLine("Current Position is " +currentPosition);
+                dieCount++;
             }
-            Console.WriteLine(currentPosition);
+            Console.WriteLine("Exact winning Position is " +currentPosition);
+            Console.WriteLine("number of times the dice was played to win the game is " +dieCount);
         }
     }
 }
